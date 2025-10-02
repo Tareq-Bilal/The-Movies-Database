@@ -1,0 +1,28 @@
+# Dependencies
+node_modules
+dist
+build
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode
+.idea
+
+# Build artifacts
+*.min.js
+*.min.css
+
+# Documentation
+SEARCH_FUNCTIONALITY_DOCUMENTATION.txt
+
+# Package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

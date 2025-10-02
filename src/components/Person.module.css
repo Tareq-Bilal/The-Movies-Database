@@ -1,0 +1,103 @@
+.personItem {
+  display: flex;
+  padding: 16px 20px;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.profileContainer {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.personName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--main-text, #000);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.personDetails {
+  font-size: 0.9rem;
+  color: var(--main-text);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.department {
+  font-weight: 450;
+  color: var(--main-text, #000);
+}
+
+.knownFor {
+  color: var(--main-text);
+  font-weight: 350;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1024px) {
+  .profileContainer {
+    width: 70px;
+    height: 70px;
+  }
+
+  .personItem {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .personItem {
+    padding: 14px 16px;
+  }
+
+  .personName {
+    font-size: 1rem;
+  }
+
+  .personDetails {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .personItem {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .profileContainer {
+    width: 50px;
+    height: 50px;
+  }
+
+  .personName {
+    font-size: 0.95rem;
+  }
+
+  .personDetails {
+    font-size: 0.8rem;
+  }
+}

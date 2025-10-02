@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  --font-family: 'Source Sans 3', sans-serif;
+  --primary-color: #032541;
+  --icon: #125d72;
+  --placeholder: #898f96;
+  --card-options-bg: #e5eaec;
+  --trending-el-border: #efefef;
+  --trending-el-hover-bg: #e3e3e34d;
+  --drop-down-text: linear-gradient(
+    to right,
+    rgba(30, 213, 169, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+
+  --light-blue: #01b4e4;
+  --main-text: #212529;
+  --movie-original-title: #999999;
+  --title-hover: #596169;
+  --filter-count-border: rgba(227, 227, 227, 1);
+  --pagination-bg: #e1e1e1;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: var(--font-family);
+  font-size: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  align-items: center;
+  position: static;
+  height: 64px;
+  max-width: 100vw;
+}

@@ -1,0 +1,74 @@
+.searchingList {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.loadingMessage,
+.errorMessage,
+.noResults {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.errorMessage {
+  color: #d32f2f;
+}
+
+.loadingMessage {
+  color: #01b4e4;
+}
+
+.keywordsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 0;
+  align-items: flex-start;
+}
+
+.companiesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 10px 0;
+}
+
+.peopleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 10px 0;
+}
+
+.networksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 10px 0;
+}
+
+@media (min-width: 1024px) {
+  .searchingList {
+    margin-top: 0rem;
+  }
+}
+@media (min-width: 1024px) {
+  .searchingList {
+    max-width: 900px;
+    flex: 1;
+    /* margin-top: 1.7rem; */
+  }
+}
+
+@media (min-width: 1400px) {
+  .searchingList {
+    max-width: 900px;
+    margin-left: 1rem;
+  }
+}

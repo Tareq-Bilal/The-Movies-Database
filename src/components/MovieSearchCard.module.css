@@ -1,0 +1,93 @@
+.movieCard {
+  display: flex;
+  align-items: stretch;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  margin-top: 5px;
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+  max-width: 1022px;
+  /* height: auto;  */
+  min-width: 278px;
+  min-height: 141px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(227, 227, 227, 1);
+}
+
+.movieCard:first-child {
+  margin-top: 0;
+}
+
+.movieCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.poster {
+  max-width: 94px;
+  border-radius: 6px 0 0 6px;
+  object-fit: cover;
+  background-color: #f0f0f0;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.movieInfo {
+  flex: 1;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--main-text);
+  line-height: 1.3;
+
+  &:hover {
+    color: var(--title-hover);
+  }
+}
+
+.originalTitle {
+  font-size: 16px;
+  color: var(--movie-original-title);
+  font-weight: 300;
+  margin-left: 3px;
+  font-style: italic;
+}
+
+.releaseDate {
+  color: var(--movie-original-title);
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.overview {
+  color: var(--main-text);
+  max-height: inherit;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
+  max-width: 896px;
+  max-height: 40px;
+}
+
+.department {
+  font-weight: 600;
+  color: var(--main-text);
+}
+
+.knownFor {
+  color: var(--movie-original-title);
+  font-weight: 400;
+}
