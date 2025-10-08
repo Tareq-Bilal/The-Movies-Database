@@ -83,20 +83,27 @@
   font-size: 0.7rem;
 }
 
-.addButton , .languageButton{
+.addButton,
+.languageButton {
   display: none;
   position: relative;
   color: white;
 }
 
-.languageButton{
+.languageButton {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  padding:5px 4px ;
+  padding: 5px 4px;
   border: 1px solid white;
   background: none;
   border-radius: 3px;
+  cursor: pointer;
+}
+
+.languageButton:hover {
+  background: white;
+  color: var(--primary-color);
 }
 
 /* Desktop Navigation */
@@ -130,9 +137,10 @@
   }
 }
 
-
 @media (min-width: 1024px) {
-   .logo , .menuButton , .brandWrap{
+  .logo,
+  .menuButton,
+  .brandWrap {
     display: none;
   }
 
@@ -140,10 +148,10 @@
     display: flex;
     align-items: center;
     margin-left: -10rem;
-  
   }
 
-  .addButton, .languageButton {
+  .addButton,
+  .languageButton {
     display: flex;
   }
 
@@ -152,28 +160,22 @@
     padding-inline: 1.2rem;
     padding-block: 0.2rem;
   }
-
 }
 
 @media (min-width: 1248px) {
-
-.desktopNav {
+  .desktopNav {
     margin-left: -30rem;
-  
-  }
-}
-
-@media (min-width: 1248px) {
-
-.desktopNav {
-    margin-left: -30rem;
-  
   }
 }
 
 @media (min-width: 1440px) {
-
-.desktopNav {
+  .desktopNav {
     margin-left: -8.5rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .desktopNav {
+    margin-left: -37.2rem;
   }
 }
