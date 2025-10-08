@@ -2,6 +2,8 @@
 
 :root {
   --font-family: 'Source Sans 3', sans-serif;
+  -webkit-font-smoothing: antialiased;
+
   --primary-color: #032541;
   --icon: #125d72;
   --placeholder: #898f96;
@@ -21,8 +23,8 @@
   --filter-count-border: rgba(227, 227, 227, 1);
   --pagination-bg: #e1e1e1;
   --light-gray: rgba(227, 227, 227, 1);
-  --filter-item-active : #e9ecef;
-  --filter-item-subactive : #f8f9fa;
+  --filter-item-active: #e9ecef;
+  --filter-item-subactive: #f8f9fa;
   --footer-button-txt: #235ea7;
 }
 

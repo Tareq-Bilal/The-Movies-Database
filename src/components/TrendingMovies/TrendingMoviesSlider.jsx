@@ -25,7 +25,7 @@ const Slider = () => {
     const fetchTrendingMovies = async () => {
       setLoading(true);
       setError(null);
-      
+
       try {
         // Map filter to API time window
         const timeWindow = activeFilter === 'today' ? 'day' : 'week';
@@ -65,7 +65,7 @@ const Slider = () => {
   const trendingData = data?.results || [];
 
   return (
-    <div ref={wrapperRef} className={`${styles.sliderWrapper} ${isScrolled ? styles.scrolled : ''}`}>
+    <div ref={wrapperRef} className={`${styles.sliderWrapper} `}>
       <div className={styles.filterContainer}>
         <div className={styles.filterLeft}>
           <span className={styles.sectionTitle}>Trending Movies</span>
@@ -77,7 +77,7 @@ const Slider = () => {
               className={styles.dropdownSelect}
             />
           </div>
-          <FilterToggle 
+          <FilterToggle
             activeFilter={activeFilter}
             onFilterChange={handleFilterChange}
             options={options}
@@ -85,10 +85,15 @@ const Slider = () => {
         </div>
       </div>
 
-      <div className={styles.sliderContainer} ref={sliderRef}>
+      <div
+        className={`${styles.sliderContainer} ${isScrolled ? styles.scrolled : ''}`}
+        ref={sliderRef}
+      >
         {loading && <LoadingBar isLoading={loading} />}
-        <div className={`${styles.cardsSlider} ${loading ? styles.loading : ''}`}>
-         {loading ? (
+        <div
+          className={`${styles.cardsSlider} ${loading ? styles.loading : ''}`}
+        >
+          {loading ? (
             <div className={styles.loadingState}></div>
           ) : error ? (
             <div className={styles.errorState}>Failed to load data</div>
@@ -98,8 +103,8 @@ const Slider = () => {
             trendingData.map((movie) => (
               <SliderCard key={movie.id} data={movie} theme="light" />
             ))
-          )}        
-          </div>
+          )}
+        </div>
       </div>
     </div>
   );

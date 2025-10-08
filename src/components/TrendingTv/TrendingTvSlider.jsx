@@ -41,7 +41,7 @@ const Slider = () => {
     const fetchTrendingTv = async () => {
       setLoading(true);
       setError(null);
-      
+
       try {
         // Map filter to API time window
         const timeWindow = activeFilter === 'today' ? 'day' : 'week';
@@ -81,14 +81,16 @@ const Slider = () => {
   const trendingData = data?.results || [];
 
   return (
-
-    <div 
-      ref={wrapperRef} className={`${styles.sliderWrapper} ${isScrolled ? styles.scrolled : ''}`}
+    <div
+      ref={wrapperRef}
+      className={`${styles.sliderWrapper} `}
       style={{
-        backgroundImage: backgroundImage ? `linear-gradient(135deg, rgba(24, 110, 207, 0.9) 0%, rgba(10, 70, 129, 0.9) 30%, rgba(10, 70, 129, 0.9) 100%), url(${backgroundImage})` : 'none',
+        backgroundImage: backgroundImage
+          ? `linear-gradient(135deg, rgba(24, 110, 207, 0.9) 0%, rgba(10, 70, 129, 0.9) 30%, rgba(10, 70, 129, 0.9) 100%), url(${backgroundImage})`
+          : 'none',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
       }}
     >
       <div className={styles.filterContainer}>
@@ -102,7 +104,7 @@ const Slider = () => {
               className={styles.dropdownSelect}
             />
           </div>
-          <FilterToggle 
+          <FilterToggle
             activeFilter={activeFilter}
             onFilterChange={handleFilterChange}
             options={options}
@@ -110,9 +112,14 @@ const Slider = () => {
         </div>
       </div>
 
-      <div className={styles.sliderContainer} ref={sliderRef}>
+      <div
+        className={`${styles.sliderContainer} ${isScrolled ? styles.scrolled : ''}`}
+        ref={sliderRef}
+      >
         {loading && <LoadingBar isLoading={loading} />}
-        <div className={`${styles.sliderCards} ${loading ? styles.loading : ''}`}>
+        <div
+          className={`${styles.sliderCards} ${loading ? styles.loading : ''}`}
+        >
           {loading ? (
             <div className={styles.loadingState}></div>
           ) : error ? (

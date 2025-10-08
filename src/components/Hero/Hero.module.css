@@ -22,6 +22,7 @@
   pointer-events: none;
   background: linear-gradient(to bottom, #186ecf, #0a4681) center/cover
     no-repeat;
+
   opacity: 0.8;
   z-index: 1;
 }
@@ -59,18 +60,14 @@
   padding-inline: 1.2rem;
 }
 
-
-.title{
+.title {
   margin: 0;
 }
 
 @media (min-width: 768px) {
   .titleContainer {
-    
     min-height: 0;
-
   }
-  
 }
 
 @media (min-width: 1024px) {
@@ -83,7 +80,7 @@
 }
 
 @media (min-width: 1440px) {
-    .titleContainer {
+  .titleContainer {
     font-size: 1.8rem;
     margin-top: 0rem;
     width: 100%;
