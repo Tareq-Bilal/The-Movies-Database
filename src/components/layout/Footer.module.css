@@ -1,0 +1,208 @@
+.footer {
+  background-color: #032541;
+  color: #fff;
+  padding: 40px 0;
+  max-width: 100%;
+  width: 100vw;
+  box-sizing: border-box;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+}
+
+.footerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding-inline: 20px;
+
+}
+
+/* Logo Section */
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.logo {
+  display: none;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.logoBlue {
+  color: #01b4e4;
+}
+
+.logoGreen {
+  color: #90cea1;
+}
+
+.joinButton {
+
+     border: 2px solid #fff;
+     background-color: #fff;
+    border-radius: 5px;
+    padding-block: 10px;
+    padding-inline: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: linear .1s;
+    color: var(--footer-button-txt);
+    
+}
+
+.joinButton:hover {
+  cursor: pointer;
+}
+
+/* Footer Columns */
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnTitle {
+    font-size: 1.2em;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLink {
+  color: #fff;
+  text-decoration: none;
+    font-size: 1.2em;
+  font-weight: 400;
+  transition: color 0.2s ease;
+  line-height: 1.4;
+}
+
+.footerLink:hover {
+  color: #01b4e4;
+}
+
+/* Responsive Design - Mobile First Approach */
+
+/* Small tablets and up (480px) */
+@media (min-width: 480px) {
+  .footerContent {
+    padding-inline: 30px;
+  }
+
+  .columnTitle {
+    font-size: 1rem;
+  }
+
+  .footerLink {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets and up (768px) */
+@media (min-width: 768px) {
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding-inline: 40px;
+  }
+
+  .logoSection {
+    grid-column: 1 / -1;
+  }
+
+  .columnTitle {
+    font-size: 1.05rem;
+  }
+
+  .footerLink {
+    font-size: 1rem;
+  }
+
+}
+
+/* Desktop and up (1024px) */
+@media (min-width: 1024px) {
+  .footer {
+    padding: 60px 0;
+  }
+
+  .footerContent {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-inline: 60px;
+  }
+
+  .logoSection {
+    grid-column: 1 / -1;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+
+  .columnTitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large desktop and up (1280px) */
+@media (min-width: 1280px) {
+  .footer {
+    padding: 80px 0;
+  }
+
+  .footerContent {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    padding-inline: 250px;
+  }
+
+  .logoSection {
+    grid-column: auto;
+    align-items: center;
+    text-align: left;
+  }
+
+  .joinButton {
+    color: var(--light-blue);
+  }
+}
+
+/* Extra large desktop (1600px) */
+@media (min-width: 1600px) {
+  .footerContent {
+    padding-inline: 180px;
+  }
+}

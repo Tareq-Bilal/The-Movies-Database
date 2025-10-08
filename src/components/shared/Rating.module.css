@@ -1,0 +1,66 @@
+.ratingContainer {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #02192c;
+  border-radius: 50%;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  top: -20px;
+  right: -12px;
+}
+
+.ratingCircle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #204529;
+  background: conic-gradient(
+    #21d07a var(--progress, 0%),
+    transparent var(--progress, 0%)
+  );
+}
+
+.progressRing {
+  transform: rotate(-90deg);
+}
+
+.progressRingBackground {
+  opacity: 0.2;
+}
+
+.progressRingForeground {
+  stroke-linecap: round;
+  stroke-dasharray: var(--circumference) var(--circumference);
+  stroke-dashoffset: var(--strokeDashoffset);
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition:
+    stroke-dashoffset 0.5s ease,
+    stroke 0.3s ease;
+}
+
+.percentageText {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-family, Arial, sans-serif);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  top: 11px;
+  right: 12px;
+}
+
+.percentageSign {
+  position: absolute;
+  top: 1px;
+  right: -5.5px;
+  font-size: 7px;
+  font-weight: bold;
+  color: white;
+}

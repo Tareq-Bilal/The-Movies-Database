@@ -1,0 +1,89 @@
+.searchBar {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  text-align: left;
+  border: none;
+  height: 44px;
+  position: -webkit-sticky; /* Safari support */
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Higher z-index to ensure it stays on top */
+  backdrop-filter: blur(10px); /* Add blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+.searchBar input {
+  flex: 1;
+  border: none;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--placeholder);
+}
+
+.searchBar input:focus {
+  outline: none;
+}
+
+.searchButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.3rem;
+  margin-left: 1rem;
+}
+
+.spin {
+  margin-top: 0.6rem;
+  margin-right: 1.5rem;
+  animation: spin 0.5s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.clearButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.2rem;
+  margin-right: 1.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--placeholder);
+}
+
+@media (min-width: 1024px) {
+  
+  .searchBar{
+    &input{
+      content: 'Search for a movie, tv show, person......';
+    }
+    border-bottom: 1px var(--light-gray) solid;
+
+    padding-left: 0rem;
+  }
+
+}
+
+@media (min-width: 1248px) {
+  .searchBar{
+    padding-left: 0rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .searchBar{
+    padding-left: 14rem;
+  }
+}
+
+@media (min-width:2560px) {
+  .searchBar{
+    padding-left: 49rem;
+  }
+}

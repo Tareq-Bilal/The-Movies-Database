@@ -1,0 +1,78 @@
+/* Search Page Container */
+.searchPage {
+  min-height: 100vh;
+  background: white;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  
+}
+
+
+/* No Query State */
+.noQuery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Filter and List Wrapper */
+.filterListWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.filterTipWrapper{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.listPaginationWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding-inline: 20px;
+  padding-bottom: 20px;
+
+}
+
+
+/* Desktop layout - Filter on left, content on right */
+@media (min-width: 768px) {
+  .searchPage {
+    padding: 0rem 0;
+  }
+
+  .filterListWrapper {
+    gap: 1.5rem;
+  }
+
+  .listPaginationWrapper {
+    gap: 2rem;
+    padding-inline: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+    .searchPage {
+    padding: 1.5rem 0;
+  }
+
+
+  .filterListWrapper {
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+
+  
+}

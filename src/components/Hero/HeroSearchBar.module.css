@@ -1,0 +1,141 @@
+/* Mobile-first approach for HeroSearchBar */
+
+.searchContainer {
+  width: 100%;
+  max-width: none;
+  padding: 0 1rem;
+  margin: 0rem auto;
+}
+
+.searchForm {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.searchInput {
+  width: 100%;
+  height: 46px;
+  padding: 0.75rem 3.5rem 0.75rem 1rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--placeholder);
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.searchInput::placeholder {
+  color: var(--placeholder, #898f96);
+  font-size: 0.9rem;
+}
+
+.searchInput:focus {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.searchButton {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  padding: 10px 26px;
+  border: 0;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  background: linear-gradient(
+    to right,
+    rgba(30, 213, 169, 1) 0%,
+    rgba(1, 180, 228, 1) 100%
+  );
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+/* Tablet styles (768px and up) */
+@media (min-width: 768px) {
+  .searchContainer {
+    padding: 0 2rem;
+  }
+
+  .searchInput {
+    height: 3rem;
+    height: 36px;
+    font-size: 1.1rem;
+    padding: 0.875rem 4rem 0.875rem 1.25rem;
+    margin-left: -1rem;
+    color : rgba(0, 0, 0, .5);
+  }
+
+  .searchInput::placeholder {
+    font-size: 1rem;
+
+  }
+
+  .searchButton {
+    width: 5rem;
+    height: 2.23rem;
+    font-size: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Desktop styles (1024px and up) */
+@media (min-width: 1024px) {
+  .searchContainer {
+    padding: 0rem 0rem;
+    padding-left: 3rem;
+  }
+
+  .searchInput {
+    height: 2.75rem;
+    height: 46px;
+    font-size: 1.2rem;
+    margin-left: -2rem;
+    color : rgba(0, 0, 0, .5);
+
+  }
+
+  .searchInput::placeholder {
+    font-size: 1.1rem;
+    content: 'Search for movie, tv show, person...';
+    color : rgba(0, 0, 0, .5);
+
+  }
+
+  .searchButton {
+    width: 6rem;
+    height: 2.8rem;
+    font-size: 1rem;
+    right: 2rem;
+  }
+}
+
+/* Large desktop styles (1440px and up) */
+@media (min-width: 1440px) {
+  .searchContainer {
+    padding: 0 3rem;
+  }
+
+  .searchInput {
+    font-size: 1.3rem;
+  }
+
+  .searchButton {
+    width: 6rem;
+    height: 2.8rem;
+    font-size: 1.2rem;
+  }
+}
