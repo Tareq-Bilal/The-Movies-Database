@@ -1,0 +1,79 @@
+.networkItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  cursor: pointer;
+  width: 100%;
+  max-width: 1022px;
+  transition: all 0.2s ease;
+  padding: 12px 16px;
+}
+
+.networkItem:hover {
+  background-color: #f8f9fa;
+  border-color: #01b4e4;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.noLogo {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #999;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .networkItem {
+    padding: 10px 12px;
+    min-height: 50px;
+  }
+
+  .logoContainer {
+    max-width: 150px;
+    height: 40px;
+  }
+
+  .noLogo {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .networkItem {
+    padding: 8px 10px;
+    min-height: 45px;
+  }
+
+  .logoContainer {
+    max-width: 120px;
+    height: 35px;
+  }
+
+  .noLogo {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .networkItem {
+    padding: 16px 20px;
+  }
+}

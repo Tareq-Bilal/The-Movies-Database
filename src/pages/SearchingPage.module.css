@@ -1,0 +1,36 @@
+.filter-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.list-pagination-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Desktop layout - Filter on left, content on right */
+@media (min-width: 1024px) {
+  .filter-list-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    /* justify-content: center; */
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .filter-list-wrapper {
+    padding: 12px 0;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .filter-list-wrapper {
+    padding: 8px 0;
+  }
+}
