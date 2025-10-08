@@ -1,6 +1,6 @@
 .trendingList {
   position: absolute;
-  top: calc(19% + 0.75rem);
+  top: calc(13%);
   left: 0;
   right: 0;
   width: 100%;
@@ -29,24 +29,30 @@
 
 @media (min-width: 1024px) {
   .trendingList {
-    top: calc(16%);
+    top: calc(13%);
   }
 }
 
 @media (min-width: 1280px) {
   .trendingList {
-    top: calc(16% + 0.5rem);
+    top: calc(14%);
   }
 }
 
 @media (min-width: 1440px) {
   .trendingList {
-    top: calc(14.5%);
+    top: calc(13%);
+  }
+}
+
+@media (min-width: 1500px) {
+  .trendingList {
+    top: calc(11%);
   }
 }
 
 @media (min-width: 2560px) {
   .trendingList {
-    top: calc(7.9%);
+    top: calc(7%);
   }
 }

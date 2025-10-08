@@ -5,7 +5,7 @@ import { Route } from 'react-router';
 import SearchingPage from './pages/SearchPage';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import SearchBar from './components/SearhBar/SearchBar';
+import SearchBar from './components/SearchBar/SearchBar';
 import TrendingList from './components/SearchTrendingList/TrendingList';
 
 function App() {
@@ -20,20 +20,19 @@ function App() {
 
   return (
     <BrowserRouter>
-    
       <Navbar onSearchClick={handleSearchClick} />
-      
-      <SearchBar 
+
+      <SearchBar
         ref={searchBarRef}
-        onSearch={setQuery} 
-        isLoading={isLoading} 
+        onSearch={setQuery}
+        isLoading={isLoading}
         onFocus={() => setShowTrendingList(true)}
         onEnter={() => setShowTrendingList(false)}
       />
-      
-      <TrendingList 
-        query={query} 
-        onLoadingChange={setIsLoading} 
+
+      <TrendingList
+        query={query}
+        onLoadingChange={setIsLoading}
         show={showTrendingList}
         onHide={() => setShowTrendingList(false)}
         searchBarRef={searchBarRef}
